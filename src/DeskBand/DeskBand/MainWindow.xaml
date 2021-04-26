@@ -1,0 +1,34 @@
+﻿<Window x:Class="DeskBand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DeskBand"
+        mc:Ignorable="d" ShowInTaskbar="False" 
+         WindowStyle="None"  ResizeMode="NoResize"  
+        Title="MainWindow" Height="450" Width="800"  Loaded="Window_Loaded">
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <!--使用WindowChrome制作窗体透明效果https://blog.walterlv.com/post/wpf-transparent-window-without-allows-transparency.html-->
+                    <WindowChrome GlassFrameThickness="-1"  CaptionHeight="0"  ResizeBorderThickness="0"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Window">
+                        <AdornerDecorator>
+                            <ContentPresenter />
+                        </AdornerDecorator>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Red">
+            <Button Click="Button_Click" Content="Click Me"></Button>
+        </Border>
+    </Grid>
+</Window>

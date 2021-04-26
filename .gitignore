@@ -1,0 +1,9 @@
+/src/DeskBand/.vs/DeskBand/v16/*.suo
+Debug
+bin
+Release
+.msi
+packages
+.suo
+.vs
+/src/DeskBand/DeskBand/*.user

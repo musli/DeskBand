@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "Win32/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Win32.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Win32.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Win32/1.0.0": {
+      "type": "project",
+      "path": "../Win32/Win32.csproj",
+      "msbuildProject": "../Win32/Win32.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "Win32 >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\surface\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
+      "projectName": "DeskBand",
+      "projectPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
+      "packagesPath": "C:\\Users\\surface\\.nuget\\packages\\",
+      "outputPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\DeskBand\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\surface\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://192.168.100.232:8091/nuget": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj": {
+              "projectPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
