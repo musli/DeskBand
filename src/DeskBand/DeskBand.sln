@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBand", "DeskBand\DeskBa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win32", "Win32\Win32.csproj", "{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Translation", "Modules.Translation\Modules.Translation.csproj", "{008CE0E8-D40D-4300-8424-2F77C85C1BF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

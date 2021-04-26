@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "Modules.Translation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Modules.Translation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Modules.Translation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "Win32/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "Modules.Translation/1.0.0": {
+      "type": "project",
+      "path": "../Modules.Translation/Modules.Translation.csproj",
+      "msbuildProject": "../Modules.Translation/Modules.Translation.csproj"
+    },
     "Win32/1.0.0": {
       "type": "project",
       "path": "../Win32/Win32.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "Modules.Translation >= 1.0.0",
       "Win32 >= 1.0.0"
     ]
   },
@@ -54,6 +73,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
+              "projectPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj"
+            },
             "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj": {
               "projectPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj"
             }
