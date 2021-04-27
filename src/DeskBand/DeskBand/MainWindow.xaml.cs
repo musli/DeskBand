@@ -25,6 +25,8 @@ namespace DeskBand
     /// </summary>
     public partial class MainWindow : Window
     {
+        //往左边偏移
+        int toLeftOffset = 150;
         public MainWindow()
         {
             InitializeComponent();
@@ -58,10 +60,10 @@ namespace DeskBand
                 var size = GetWindowSize(panelHandle);
                 //嵌入本窗体到任务栏容器
                 User.SetParent(windowHandle, panelHandle);
-                User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300, 0, 300, (int)size.Height, 0x0040);
+                User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300 - toLeftOffset, 0, 300, (int)size.Height, 0x0040);
                 //设置任务栏变短一点，给本窗体留出空间显示
                 taskBarHandle = (IntPtr)User.FindWindowEx(iconParentPtr, IntPtr.Zero, "MSTaskSwWClass", null);
-                User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300, (int)size.Height, 0x0040);
+                User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300 - toLeftOffset, (int)size.Height, 0x0040);
             }
             catch (Exception ex)
             {
@@ -92,8 +94,8 @@ namespace DeskBand
                 else
                 {
                     //任务栏为横着的
-                    User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300, 0, 300, (int)size.Height, 0x0040);
-                    User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300, (int)size.Height, 0x0040);
+                    User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300 - toLeftOffset, 0, 300, (int)size.Height, 0x0040);
+                    User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300 - toLeftOffset, (int)size.Height, 0x0040);
 
                 }
             }

@@ -61,8 +61,9 @@ namespace Modules.Translation
 
                 Dispatcher.Invoke(() =>
                 {
-                    txtSource.Text += msg;
-                    txtSource.Select(txtSource.Text.Length - msg.Length, msg.Length);
+                    txtResult.Text = msg;
+                    txtResult.SelectAll();
+                    txtResult.Focus();
 
                 });
             });
@@ -87,11 +88,13 @@ namespace Modules.Translation
                 using var json = new Utf8JsonWriter(buffer, options);
                 JsonDocument.Parse(txtSource.Text).WriteTo(json);
                 json.Flush();
-                txtSource.Text = Encoding.UTF8.GetString(buffer.WrittenSpan.ToArray());
-                txtSource.SelectAll();
+                txtResult.Text = Encoding.UTF8.GetString(buffer.WrittenSpan.ToArray());
+                txtResult.SelectAll();
+                txtResult.Focus();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                txtSource.Text = ex.Message;
             }
         }
 

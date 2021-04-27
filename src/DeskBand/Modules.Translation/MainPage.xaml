@@ -25,11 +25,18 @@
                 <Setter Property="BorderThickness" Value="0"/>
             </Style>
         </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <TextBox x:Name="txtSource" ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}">
             <TextBox.InputBindings>
                 <KeyBinding Command="{StaticResource Enter}" Key="Enter"></KeyBinding>
                 <MouseBinding Command="{StaticResource Format}"  Gesture="LeftDoubleClick"/>
             </TextBox.InputBindings>
         </TextBox>
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="Transparent"></GridSplitter>
+        <TextBox Grid.Column="2" IsReadOnly="True" x:Name="txtResult" ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}"></TextBox>
     </Grid>
 </Page>
