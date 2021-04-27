@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Win32", "Win32\Win32.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Translation", "Modules.Translation\Modules.Translation.csproj", "{008CE0E8-D40D-4300-8424-2F77C85C1BF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{4FBD8200-BA24-4F9D-B391-B1EBDEDDABAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FBD8200-BA24-4F9D-B391-B1EBDEDDABAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FBD8200-BA24-4F9D-B391-B1EBDEDDABAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FBD8200-BA24-4F9D-B391-B1EBDEDDABAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FBD8200-BA24-4F9D-B391-B1EBDEDDABAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

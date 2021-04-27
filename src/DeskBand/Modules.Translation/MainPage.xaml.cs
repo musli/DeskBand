@@ -17,6 +17,7 @@ using System.Text.Json;
 using System.Buffers;
 using System.Text.Encodings.Web;
 using System.Text.Unicode;
+using System.Diagnostics;
 
 namespace Modules.Translation
 {
@@ -25,17 +26,64 @@ namespace Modules.Translation
     /// </summary>
     public partial class MainPage : Page
     {
+        #region Fields
+        WebClient client = new WebClient();
+
+        #endregion
+
+        #region Methods
         public MainPage()
         {
             InitializeComponent();
         }
-        WebClient client = new WebClient();
+
+        #endregion
+
+        #region Events
         /// <summary>
-        /// 回车执行翻译
+        /// 检测ctrl+v自动翻译
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        private void txtSource_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.V)
+            {
+                CommandBindingTranslation_Executed(null, null);
+            }
+        }
+        /// <summary>
+        /// 退出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuItemExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        /// <summary>
+        /// 跳转项目地址
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = (sender as Hyperlink).NavigateUri.AbsoluteUri,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
+        #endregion
+
+        #region Commands
+        /// <summary>
+        /// 翻译命令
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommandBindingTranslation_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             Task.Run(() =>
             {
@@ -69,7 +117,7 @@ namespace Modules.Translation
             });
         }
         /// <summary>
-        /// 双击格式化json
+        /// 格式化命令
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -94,9 +142,32 @@ namespace Modules.Translation
             }
             catch (Exception ex)
             {
-                txtSource.Text = ex.Message;
+                txtResult.Text = ex.Message;
             }
         }
-
+        /// <summary>
+        /// 选择所有文本命令
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommandBindingSelectAll_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            txtSource.SelectAll();
+        }
+        /// <summary>
+        /// Run命令
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommandBindingGo_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = txtSource.Text,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
+        }
+        #endregion
     }
 }
