@@ -47,10 +47,10 @@ namespace Modules.Translation
         /// <param name="e"></param>
         private void txtSource_KeyUp(object sender, KeyEventArgs e)
         {
-            if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.V)
-            {
-                CommandBindingTranslation_Executed(null, null);
-            }
+            //if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.V)
+            //{
+            //    CommandBindingTranslation_Executed(null, null);
+            //}
         }
         /// <summary>
         /// 退出
@@ -88,14 +88,17 @@ namespace Modules.Translation
             Task.Run(() =>
             {
                 string msg = string.Empty;
+                string lan = string.Empty;
                 Dispatcher.Invoke(() =>
                 {
                     msg = txtSource.Text;
+                    lan = togLanguage.IsChecked.Value ? "en" : "zh-Hans";
                 });
                 try
                 {
+                    //zh-Hans
                     var url = "https://cn.bing.com/ttranslatev3?isVertical=1&&IG=FA5F953F30714718B7F4C1DB9C9EFFBC&IID=translator.5024.1";
-                    var data = Encoding.UTF8.GetBytes($"&fromLang=auto-detect&text={msg}&to=zh-Hans");
+                    var data = Encoding.UTF8.GetBytes($"&fromLang=auto-detect&text={msg}&to={lan}");
                     client.Headers.Add("Content-type", "application/x-www-form-urlencoded");
                     var result = client.UploadData(url, data);
                     var json = Encoding.UTF8.GetString(result);
@@ -161,12 +164,18 @@ namespace Modules.Translation
         /// <param name="e"></param>
         private void CommandBindingGo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            var psi = new ProcessStartInfo
+            try
             {
-                FileName = txtSource.Text,
-                UseShellExecute = true
-            };
-            Process.Start(psi);
+                var psi = new ProcessStartInfo
+                {
+                    FileName = txtSource.Text,
+                    UseShellExecute = true
+                };
+                Process.Start(psi);
+            }
+            catch (Exception)
+            {
+            }
         }
         #endregion
     }

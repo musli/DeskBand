@@ -26,7 +26,7 @@ namespace DeskBand
     public partial class MainWindow : Window
     {
         //往左边偏移
-        int toLeftOffset = 150;
+        int toLeftOffset = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -61,8 +61,9 @@ namespace DeskBand
                 //嵌入本窗体到任务栏容器
                 User.SetParent(windowHandle, panelHandle);
                 User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300 - toLeftOffset, 0, 300, (int)size.Height, 0x0040);
+                //User.SetWindowPos(windowHandle, (IntPtr)(0), 800, 0, 300, (int)size.Height, 0x0040);
                 //设置任务栏变短一点，给本窗体留出空间显示
-                taskBarHandle = (IntPtr)User.FindWindowEx(iconParentPtr, IntPtr.Zero, "MSTaskSwWClass", null);
+                taskBarHandle = (IntPtr)User.FindWindowEx(panelHandle, IntPtr.Zero, "MSTaskSwWClass", null);
                 User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300 - toLeftOffset, (int)size.Height, 0x0040);
             }
             catch (Exception ex)
@@ -78,7 +79,7 @@ namespace DeskBand
         /// </summary>
         public void CheckUpdateWindowPosition()
         {
-
+            var oldSize = Size.Empty;
             while (true)
             {
                 Thread.Sleep(500);
@@ -93,9 +94,18 @@ namespace DeskBand
                 }
                 else
                 {
-                    //任务栏为横着的
-                    User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300 - toLeftOffset, 0, 300, (int)size.Height, 0x0040);
-                    User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300 - toLeftOffset, (int)size.Height, 0x0040);
+                    var newSize = new Size(size.Width - 300 - toLeftOffset, size.Height);
+                    if (oldSize != newSize)//解决一直重新设置taskBarHandle窗口的位置会导致其他的任务栏软件闪的问题(其他任务栏软件应该有监控taskBarHandle大小改变事件，重新设置自己的布局导致的删)
+                    {
+                        Task.Run(() =>//解决用户拖动任务栏过快导致oldSize=newSize，布局还没刷新过来的问题
+                        {
+                            Thread.Sleep(500);
+                            //任务栏为横着的
+                            User.SetWindowPos(windowHandle, (IntPtr)(0), (int)size.Width - 300 - toLeftOffset, 0, 300, (int)size.Height, 0x0040);
+                            User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width - 300 - toLeftOffset, (int)size.Height, 0x0040);
+                            oldSize = newSize;
+                        });
+                    }
 
                 }
             }
@@ -111,6 +121,12 @@ namespace DeskBand
             var rect = new RECT() { };
             User.GetWindowRect(panelHandle, ref rect);
             return new Size { Width = rect.Right - rect.Left, Height = rect.Bottom - rect.Top };
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var size = GetWindowSize(panelHandle);
+            User.SetWindowPos(taskBarHandle, (IntPtr)(0), 0, 0, (int)size.Width, (int)size.Height, 0x0040);
         }
     }
 }

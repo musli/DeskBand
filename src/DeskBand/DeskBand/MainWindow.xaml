@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeskBand"
         mc:Ignorable="d" ShowInTaskbar="False" 
          WindowStyle="None"  ResizeMode="NoResize"  
-        Title="MainWindow" Height="30" Width="90"  Loaded="Window_Loaded">
+        Title="MainWindow" Height="30" Width="90"  Loaded="Window_Loaded" Closed="Window_Closed">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="WindowChrome.WindowChrome">

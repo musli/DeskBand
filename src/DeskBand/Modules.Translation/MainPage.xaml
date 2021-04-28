@@ -52,7 +52,27 @@
             </TextBox.InputBindings>
             <TextBox.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="翻译(Ctrl+T)" Command="{StaticResource Translation}"></MenuItem>
+                    <MenuItem  Command="{StaticResource Translation}">
+                        <MenuItem.Header>
+                        <WrapPanel>
+                                <TextBlock Text="翻译(Ctrl+T)"></TextBlock>
+                                <ToggleButton x:Name="togLanguage" Margin="20,0,0,0">
+                                    <ToggleButton.Style>
+                                        <Style TargetType="ToggleButton">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Content" Value="中>英"></Setter>
+                                                </Trigger>
+                                                <Trigger Property="IsChecked" Value="False">
+                                                    <Setter Property="Content" Value="英>中"></Setter>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ToggleButton.Style>
+                                </ToggleButton>
+                        </WrapPanel>
+                        </MenuItem.Header>
+                    </MenuItem>
                     <MenuItem Header="访问它(Ctrl+G)" Command="{StaticResource Go}"></MenuItem>
                     <MenuItem Header="格式化Json(Ctrl+F)" Command="{StaticResource Format}"></MenuItem>
                     <MenuItem >
@@ -62,7 +82,7 @@
                     </MenuItem>
                     <MenuItem>
                         <MenuItem.Header>
-                            <Hyperlink NavigateUri="https://github.com/musli/DeskBand" Click="Hyperlink_Click">喜欢？为本项目点个☆吧</Hyperlink>
+                            <Hyperlink NavigateUri="https://github.com/musli/DeskBand" Click="Hyperlink_Click">喜欢？给项目点个☆吧</Hyperlink>
                         </MenuItem.Header>
                     </MenuItem>
                     <MenuItem Header="退出" Click="MenuItemExit_Click"></MenuItem>
