@@ -122,7 +122,11 @@ namespace DeskBand
             User.GetWindowRect(panelHandle, ref rect);
             return new Size { Width = rect.Right - rect.Left, Height = rect.Bottom - rect.Top };
         }
-
+        /// <summary>
+        /// 退出还原任务栏布局
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Closed(object sender, EventArgs e)
         {
             var size = GetWindowSize(panelHandle);

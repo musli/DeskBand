@@ -54,8 +54,8 @@
                 <ContextMenu>
                     <MenuItem  Command="{StaticResource Translation}">
                         <MenuItem.Header>
-                        <WrapPanel>
-                                <TextBlock Text="翻译(Ctrl+T)"></TextBlock>
+                            <WrapPanel>
+                                <TextBlock Text="翻译"></TextBlock>
                                 <ToggleButton x:Name="togLanguage" Margin="20,0,0,0">
                                     <ToggleButton.Style>
                                         <Style TargetType="ToggleButton">
@@ -70,11 +70,11 @@
                                         </Style>
                                     </ToggleButton.Style>
                                 </ToggleButton>
-                        </WrapPanel>
+                            </WrapPanel>
                         </MenuItem.Header>
                     </MenuItem>
-                    <MenuItem Header="访问它(Ctrl+G)" Command="{StaticResource Go}"></MenuItem>
-                    <MenuItem Header="格式化Json(Ctrl+F)" Command="{StaticResource Format}"></MenuItem>
+                    <MenuItem Header="格式化Json" Command="{StaticResource Format}"></MenuItem>
+                    <MenuItem Header="访问它" Command="{StaticResource Go}"></MenuItem>
                     <MenuItem >
                         <MenuItem.Header>
                             <ToggleButton x:Name="togButton" Content="显隐操作按钮" IsChecked="True"></ToggleButton>
@@ -85,14 +85,16 @@
                             <Hyperlink NavigateUri="https://github.com/musli/DeskBand" Click="Hyperlink_Click">喜欢？给项目点个☆吧</Hyperlink>
                         </MenuItem.Header>
                     </MenuItem>
+                    <MenuItem Header="复制" Command="ApplicationCommands.Copy"></MenuItem>
+                    <MenuItem Header="粘贴" Command="ApplicationCommands.Paste"></MenuItem>
                     <MenuItem Header="退出" Click="MenuItemExit_Click"></MenuItem>
                 </ContextMenu>
             </TextBox.ContextMenu>
         </TextBox>
         <DockPanel Grid.Column="1" x:Name="dcPanel" Visibility="{Binding ElementName=togButton,Path=IsChecked, Converter={StaticResource BTVConvert}}">
-            <Button Content="T" ToolTip="Translation" Command="{StaticResource Translation}"></Button>
-            <Button Content="F" ToolTip="Format" Command="{StaticResource Format}"></Button>
-            <Button Content="G" ToolTip="GoTo" Command="{StaticResource Go}"></Button>
+            <Button Content="T" ToolTip="Translation(Ctrl+T)" Command="{StaticResource Translation}"></Button>
+            <Button Content="F" ToolTip="Format(Ctrl+F)" Command="{StaticResource Format}"></Button>
+            <Button Content="G" ToolTip="GoTo(Ctrl+G)" Command="{StaticResource Go}"></Button>
         </DockPanel>
         <TextBox Grid.Column="2" IsReadOnly="True" x:Name="txtResult" Margin="2,0,0,0" ToolTip="{Binding Path=Text, RelativeSource={RelativeSource Mode=Self}}"></TextBox>
     </Grid>
