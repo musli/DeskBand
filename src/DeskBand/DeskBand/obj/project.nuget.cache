@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "co+U/GJu3UqEW6MDVs4mw2LzwQho0XmzjLYFzlVHzsA9c75qwAlMuIYCPfOW2jI6roM+NbMqyguIZoaq0cPfZQ==",
+  "dgSpecHash": "L/tPK8vC33mqPpMVGX44JCMxSkjslNCLZwGxppmj/DNuVetXlYdGg02Z5W5CB06nRHwWpFUSDe3eKJKAJupabQ==",
   "success": true,
   "projectFilePath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512"
+  ],
   "logs": []
 }

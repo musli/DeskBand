@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CefSharp.Wpf" Version="79.1.360" />
+  </ItemGroup>
 
 </Project>

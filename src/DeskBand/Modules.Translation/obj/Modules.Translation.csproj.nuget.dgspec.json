@@ -40,6 +40,12 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "CefSharp.Wpf": {
+              "target": "Package",
+              "version": "[79.1.360, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

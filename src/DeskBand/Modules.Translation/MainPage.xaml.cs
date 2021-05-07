@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using CefSharp.Wpf.Internals;
+using System;
+using System.Buffers;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
+using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Text.Json;
-using System.Buffers;
-using System.Text.Encodings.Web;
-using System.Text.Unicode;
-using System.Diagnostics;
 
 namespace Modules.Translation
 {
@@ -28,13 +24,17 @@ namespace Modules.Translation
     {
         #region Fields
         WebClient client = new WebClient();
-
         #endregion
 
         #region Methods
         public MainPage()
         {
+          
             InitializeComponent();
+            //支持中文输入，但是ime不能定位到光标位置，但是可以在popup里面输入中文
+            Browser.WpfKeyboardHandler = new WpfKeyboardHandler(Browser);
+            //支持中文输入以及ime定位但是在popup里面失效，推测是popup没有实体句柄之类的
+            //Browser.WpfKeyboardHandler = new WpfImeKeyboardHandler(Browser);
         }
 
         #endregion
@@ -74,6 +74,16 @@ namespace Modules.Translation
                 UseShellExecute = true
             };
             Process.Start(psi);
+        }
+        /// <summary>
+        /// 鼠标离开的时候隐藏popup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void popBro_MouseLeave(object sender, MouseEventArgs e)
+        {
+            if (cheHide.IsChecked.Value == true)
+                popBro.SetCurrentValue(Popup.IsOpenProperty, false);
         }
         #endregion
 
@@ -177,6 +187,16 @@ namespace Modules.Translation
             {
             }
         }
+        /// <summary>
+        /// 浏览命令
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CommandBindingBrowser_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            Browser.Address = txtAddress.Text;
+        }
         #endregion
+       
     }
 }

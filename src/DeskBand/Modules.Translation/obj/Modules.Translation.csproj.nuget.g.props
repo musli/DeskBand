@@ -15,4 +15,10 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)cef.redist.x86\79.1.36\build\cef.redist.x86.props" Condition="Exists('$(NuGetPackageRoot)cef.redist.x86\79.1.36\build\cef.redist.x86.props')" />
+    <Import Project="$(NuGetPackageRoot)cef.redist.x64\79.1.36\build\cef.redist.x64.props" Condition="Exists('$(NuGetPackageRoot)cef.redist.x64\79.1.36\build\cef.redist.x64.props')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.props" Condition="Exists('$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.props" Condition="Exists('$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.props')" />
+  </ImportGroup>
 </Project>

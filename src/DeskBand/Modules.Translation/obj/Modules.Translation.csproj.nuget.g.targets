@@ -3,4 +3,8 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.targets" Condition="Exists('$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.targets')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.targets" Condition="Exists('$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.targets')" />
+  </ImportGroup>
 </Project>

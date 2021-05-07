@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mRZK7lCQ8NpbOvg1LHizQiNitWvb9slj/beZITSs1ivfnXGyjP/395sgZ/NP2ma3XWvq6w4odMABSj1b7MMKYg==",
+  "dgSpecHash": "DxJYTqmOIkg3EBdUX1SehsV3GUqb4PxJeZb+Xu1Ssc+Ij0NjWFaRf3ahH1B+9NYE7shP4HkXc1fvHPWqq6oj0A==",
   "success": true,
   "projectFilePath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
+    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512"
+  ],
   "logs": []
 }
