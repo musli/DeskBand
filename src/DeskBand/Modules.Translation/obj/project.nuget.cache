@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DxJYTqmOIkg3EBdUX1SehsV3GUqb4PxJeZb+Xu1Ssc+Ij0NjWFaRf3ahH1B+9NYE7shP4HkXc1fvHPWqq6oj0A==",
+  "dgSpecHash": "OOJG7vdAYp8djiQADUlqQAsWT1i/keWmGf5/OdZEVDWVYuiKhPeEts8UitIcHBKLqBmtUcBF4CdknqdHxJHhiw==",
   "success": true,
-  "projectFilePath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
+  "projectFilePath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
-    "C:\\Users\\surface\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
-    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
-    "C:\\Users\\surface\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512"
+    "C:\\Users\\13414\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
+    "C:\\Users\\13414\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
+    "C:\\Users\\13414\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
+    "C:\\Users\\13414\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512"
   ],
   "logs": []
 }

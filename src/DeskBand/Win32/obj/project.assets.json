@@ -180,27 +180,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\surface\\.nuget\\packages\\": {}
+    "C:\\Users\\13414\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
+      "projectUniqueName": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
       "projectName": "Win32",
-      "projectPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
-      "packagesPath": "C:\\Users\\surface\\.nuget\\packages\\",
-      "outputPath": "D:\\Drive\\Works\\DeskBand\\src\\DeskBand\\Win32\\obj\\",
+      "projectPath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
+      "packagesPath": "C:\\Users\\13414\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Win32\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\surface\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\13414\\NuGet.Config",
+        "C:\\Users\\13414\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "http://192.168.100.232:8091/nuget": {},
+        "https://aka.ms/maui-preview/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -236,7 +237,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
       }
     }
   }

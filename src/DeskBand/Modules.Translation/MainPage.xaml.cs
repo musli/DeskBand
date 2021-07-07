@@ -1,4 +1,7 @@
-﻿using CefSharp.Wpf.Internals;
+﻿using CefSharp;
+using CefSharp.Wpf;
+using CefSharp.Wpf.Internals;
+using Modules.Translation.Custom;
 using System;
 using System.Buffers;
 using System.Diagnostics;
@@ -8,12 +11,16 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Unicode;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
+using System.Windows.Shapes;
 
 namespace Modules.Translation
 {
@@ -29,7 +36,9 @@ namespace Modules.Translation
         #region Methods
         public MainPage()
         {
-          
+            CefSettings _settings = new CefSettings();
+            _settings.UserAgent = "tv.danmaku.bili/6250300 (Linux; U; Android 11; zh_CN; V1824A; Build/RP1A.200720.012; Cronet/81.0.4044.156)";
+            Cef.Initialize(_settings);
             InitializeComponent();
             //支持中文输入，但是ime不能定位到光标位置，但是可以在popup里面输入中文
             Browser.WpfKeyboardHandler = new WpfKeyboardHandler(Browser);
@@ -95,6 +104,8 @@ namespace Modules.Translation
         /// <param name="e"></param>
         private void CommandBindingTranslation_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(txtSource.Text))
+                return;
             Task.Run(() =>
             {
                 string msg = string.Empty;
@@ -136,7 +147,8 @@ namespace Modules.Translation
         /// <param name="e"></param>
         private void CommandBindingFormat_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-
+            if (string.IsNullOrEmpty(txtSource.Text))
+                return;
             try
             {
                 var buffer = new ArrayBufferWriter<byte>();
@@ -174,6 +186,8 @@ namespace Modules.Translation
         /// <param name="e"></param>
         private void CommandBindingGo_Executed(object sender, ExecutedRoutedEventArgs e)
         {
+            if (string.IsNullOrEmpty(txtSource.Text))
+                return;
             try
             {
                 var psi = new ProcessStartInfo
@@ -197,6 +211,31 @@ namespace Modules.Translation
             Browser.Address = txtAddress.Text;
         }
         #endregion
-       
+
+        static SolidColorBrush polygonBrush = new SolidColorBrush(Color.FromArgb(128, 255, 255, 255));
+        /// <summary>
+        /// 按钮点击开始涟漪动画
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var grid = sender as Grid;
+
+            var time = 0.5d;
+            var path = grid.Children[0] as Path;
+            var ellipse = path.Data as EllipseGeometry;
+
+            //设置圆心位置
+            ellipse.Center = e.GetPosition(grid);
+            //根据勾股定理计算涟漪最大长度
+            var maxLength = Math.Sqrt(Math.Pow(grid.ActualWidth, 2) + Math.Pow(grid.ActualHeight, 2));
+            //开始涟漪放缩动画
+            ellipse.BeginAnimation(EllipseGeometry.RadiusXProperty, new DoubleAnimation(0, maxLength, new Duration(TimeSpan.FromSeconds(time))));
+            //开始透明度消失动画
+            path.BeginAnimation(Path.OpacityProperty, new DoubleAnimation(1, 0, new Duration(TimeSpan.FromSeconds(time))));
+        }
+
+      
     }
 }
