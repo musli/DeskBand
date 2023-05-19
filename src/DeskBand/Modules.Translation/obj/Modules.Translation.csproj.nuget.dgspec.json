@@ -1,29 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {}
+    "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
+    "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
+        "projectUniqueName": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
         "projectName": "Modules.Translation",
-        "projectPath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
-        "packagesPath": "C:\\Users\\13414\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Modules.Translation\\obj\\",
+        "projectPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
+        "packagesPath": "C:\\Users\\28045\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\13414\\NuGet.Config",
-          "C:\\Users\\13414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\28045\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows7.0"
+          "net5.0-windows"
         ],
         "sources": {
-          "http://192.168.100.232:8091/nuget": {},
-          "https://aka.ms/maui-preview/index.json": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,10 +51,25 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -65,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "/GgL1HKOrFxWdtGCVnTH7l/rvEMhq0UC3xGkbFMezgqPiN13niCoclZczu1oZHlYsfNAL5pXc0suUg77FJwHIw==",
+  "dgSpecHash": "wWCckS27E2ep3YKQpSNxv3fG3fwR9PPmS25RNkCNLK6zYX+DudxgNvfL/AttDyiLo7ModAY29QpKVqaLvxDAZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
+  "projectFilePath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\13414\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
-    "C:\\Users\\13414\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
-    "C:\\Users\\13414\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
-    "C:\\Users\\13414\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512",
-    "C:\\Users\\13414\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\5.0.5\\microsoft.netcore.app.host.win-x86.5.0.5.nupkg.sha512"
+    "C:\\Users\\28045\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
   ],
   "logs": []
 }

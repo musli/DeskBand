@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeskBand", "DeskBand\DeskBand.csproj", "{48AC5A26-264C-4FF6-B6AF-20876034F1C2}"
 EndProject
@@ -27,8 +27,8 @@ Global
 		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Debug|x86.Build.0 = Debug|x86
 		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x64.ActiveCfg = Release|Any CPU
-		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x64.Build.0 = Release|Any CPU
+		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x64.ActiveCfg = Release|x64
+		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x64.Build.0 = Release|x64
 		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x86.ActiveCfg = Release|x86
 		{48AC5A26-264C-4FF6-B6AF-20876034F1C2}.Release|x86.Build.0 = Release|x86
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -39,8 +39,8 @@ Global
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Debug|x86.Build.0 = Debug|x86
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x64.ActiveCfg = Release|Any CPU
-		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x64.Build.0 = Release|Any CPU
+		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x64.ActiveCfg = Release|x64
+		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x64.Build.0 = Release|x64
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x86.ActiveCfg = Release|x86
 		{4E3F63A9-DE6C-42E6-BD1A-4B8736D8F8C3}.Release|x86.Build.0 = Release|x86
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -51,8 +51,8 @@ Global
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Debug|x86.Build.0 = Debug|x86
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x64.ActiveCfg = Release|Any CPU
-		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x64.Build.0 = Release|Any CPU
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x64.ActiveCfg = Release|x64
+		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x64.Build.0 = Release|x64
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x86.ActiveCfg = Release|x86
 		{008CE0E8-D40D-4300-8424-2F77C85C1BF0}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection

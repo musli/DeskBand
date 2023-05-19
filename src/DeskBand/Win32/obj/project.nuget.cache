@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "YUw/jsrT5NV7F+F0deYYSScvoVbedeR1Y5X4GqfylTCY0Sa8B26SOHwplATMOvWpI9P5cQZU/PDqHJE3cqSC7g==",
+  "dgSpecHash": "RrQqXlTg2PVWJmFRlu0pa8kgJ38ecDtVd4xMys04eDY3941pNeqsuyXFlken52bXJitPzTgTtxsE+KaB2SNSQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\13414\\SynologyDrive\\Works\\DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
+  "projectFilePath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\13414\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\13414\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\28045\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
