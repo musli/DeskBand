@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wWCckS27E2ep3YKQpSNxv3fG3fwR9PPmS25RNkCNLK6zYX+DudxgNvfL/AttDyiLo7ModAY29QpKVqaLvxDAZA==",
+  "dgSpecHash": "NriCNZxcexTn821tAFs1OBib+TmuXhdsGRmVhZP3nw8xtUj1lIaus8dKXrebx9VSq1Y1tcxfFLQSlJ8MD11xyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
   "expectedPackageFiles": [
@@ -8,10 +8,7 @@
     "C:\\Users\\28045\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",
     "C:\\Users\\28045\\.nuget\\packages\\cefsharp.common\\79.1.360\\cefsharp.common.79.1.360.nupkg.sha512",
     "C:\\Users\\28045\\.nuget\\packages\\cefsharp.wpf\\79.1.360\\cefsharp.wpf.79.1.360.nupkg.sha512",
-    "C:\\Users\\28045\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\28045\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.17\\microsoft.netcore.app.host.win-x64.5.0.17.nupkg.sha512"
+    "C:\\Users\\28045\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.28\\microsoft.windows.sdk.net.ref.10.0.19041.28.nupkg.sha512"
   ],
   "logs": []
 }
