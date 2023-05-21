@@ -36,16 +36,6 @@ namespace Modules.Translation
         public static readonly DependencyProperty HeaderBackgroundProperty =
             DependencyProperty.RegisterAttached("HeaderBackground", typeof(Brush), typeof(ControlAttach), new PropertyMetadata(null));
 
-        public static CornerRadius GetCornerRadius(DependencyObject obj)
-        {
-            return (CornerRadius)obj.GetValue(CornerRadiusProperty);
-        }
-
-        public static void SetCornerRadius(DependencyObject obj, CornerRadius value)
-        {
-            obj.SetValue(CornerRadiusProperty, value);
-        }
-
         /// <summary>
         /// 控件边缘圆角值
         /// </summary>

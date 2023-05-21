@@ -10,35 +10,34 @@
                 <ControlTemplate TargetType="Button">
                     <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="{Binding Path=(helper:ControlAttach.CornerRadius),RelativeSource={RelativeSource Mode=TemplatedParent}}">
                         <Grid ClipToBounds="True" PreviewMouseLeftButtonDown="Grid_MouseLeftAsyncButtonDown">
-                            <custom:ChildUICanvas/>
+                            <custom:ChildUICanvas />
                             <StackPanel Margin="{TemplateBinding Padding}" Orientation="Horizontal" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
                                 <ContentControl Content="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(helper:ControlAttach.Icon)}" Margin="0,0,8,0">
                                     <ContentControl.Style>
                                         <Style TargetType="ContentControl">
                                             <Style.Triggers>
                                                 <Trigger Property="Content" Value="{x:Null}">
-                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                    <Setter Property="Visibility" Value="Collapsed" />
                                                 </Trigger>
                                             </Style.Triggers>
                                         </Style>
                                     </ContentControl.Style>
                                 </ContentControl>
-                                <ContentPresenter/>
+                                <ContentPresenter />
                             </StackPanel>
                         </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="helper:ControlAttach.CornerRadius" Value="4"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Padding" Value="10,0"/>
-        <!--<Setter Property="MinHeight" Value="30"/>
-        <Setter Property="MinWidth" Value="70"/>-->
-        <Setter Property="HorizontalContentAlignment" Value="Center"/>
-        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="Microsoft YaHei" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Padding" Value="10,0" />
+        <!--<Setter Property="MinHeight" Value="30" />
+        <Setter Property="MinWidth" Value="70" />-->
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Cursor" Value="Hand" />
     </Style>
 </ResourceDictionary>
