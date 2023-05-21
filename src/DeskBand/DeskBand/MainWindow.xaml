@@ -27,9 +27,6 @@
         </Style>
     </Window.Style>
     <Grid>
-        <Border BorderThickness="0" BorderBrush="Red" Visibility="Collapsed">
-            <Button Click="Button_Click" Content="Click Me"></Button>
-        </Border>
         <Frame x:Name="frame"></Frame>
     </Grid>
 </Window>

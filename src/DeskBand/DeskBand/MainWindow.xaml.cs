@@ -23,11 +23,6 @@ namespace DeskBand
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("hello");
-        }
-
         private IntPtr panelHandle = IntPtr.Zero;
         private IntPtr taskBarHandle = IntPtr.Zero;
         private IntPtr windowHandle = IntPtr.Zero;
