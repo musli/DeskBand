@@ -19,7 +19,7 @@ namespace Modules.Translation
     {
         #region Methods
 
-        private static string currentPath = System.Reflection.Assembly.GetExecutingAssembly().Location; // System.Environment.CurrentDirectory;
+        private static string currentPath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location); // System.Environment.CurrentDirectory;
         private static string configFileName = "\\config.ini";
         private static string ipmitoolPath = currentPath + "\\ipmitool.exe";
         private static string configFilePath = currentPath + configFileName;
@@ -99,13 +99,20 @@ namespace Modules.Translation
             }
         }
 
+        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            // 这里是你要执行的循环体代码
+            cpu1test += 1;
+            this.CPU1T.Content = "." + cpu1test;
+        }
+
         /*开始监控*/
 
         private void StartMonitor()
         {
             timer = new System.Timers.Timer(1000);
             // 设置定时器触发事件的处理方法
-            timer.Elapsed += background_FetchStates_DoWork;
+            timer.Elapsed += Timer_Elapsed;
 
             // 设置定时器为可重复触发
             timer.AutoReset = false;
@@ -148,7 +155,7 @@ namespace Modules.Translation
                         temp[1] = src[1];
                         if (cpu_flag == 1 && temp[0].StartsWith("Temp"))
                         {
-                            this.CPU1T.Content = src[1].Substring(0, 3);
+                            CPU1T.Content = src[1].Substring(0, 3);
                             cpu_flag++;
                             int CPU1_int = int.Parse(src[1].Substring(0, 3));
                             //if (CPU1_int >= 85)
@@ -167,7 +174,7 @@ namespace Modules.Translation
                         }
                         if (cpu_flag == 2 && temp[0].StartsWith("Temp"))
                         {
-                            this.CPU2T.Content = src[1].Substring(0, 3);
+                            CPU2T.Content = src[1].Substring(0, 3);
                             int CPU2_int = int.Parse(src[1].Substring(0, 3));
                             //if (CPU2_int >= 85)
                             //{
@@ -186,7 +193,7 @@ namespace Modules.Translation
                         if (temp[0].StartsWith("CPU Usage"))
                         {
                             string[] usage_list = src[1].Split('.');
-                            this.CpuUsage.Content = usage_list[0];
+                            CpuUsage.Content = usage_list[0];
                             //int usage_int = int.Parse(usage_list[0]);
                             //if (usage_int >= 90)
                             //{
