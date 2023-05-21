@@ -40,10 +40,10 @@
                 <ColumnDefinition Width="2*" />
                 <ColumnDefinition Width="2*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="100%">
+            <Button x:Name="CpuUsage" Grid.Column="0" Content="100%">
             </Button>
-            <Button Grid.Column="1"  Content="56c" ></Button>
-            <Button Grid.Column="2"  Content="56c"></Button>
+            <Button x:Name="CPU1T" Grid.Column="1"  Content="56c" ></Button>
+            <Button x:Name="CPU2T" Grid.Column="2"  Content="56c"></Button>
         </Grid>
     </Grid>
 </Page>

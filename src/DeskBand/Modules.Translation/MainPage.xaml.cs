@@ -18,6 +18,7 @@ namespace Modules.Translation
         public MainPage()
         {
             InitializeComponent();
+            myButton.Content = "New";
             //支持中文输入，但是ime不能定位到光标位置，但是可以在popup里面输入中文
             //支持中文输入以及ime定位但是在popup里面失效，推测是popup没有实体句柄之类的
             //Browser.WpfKeyboardHandler = new WpfImeKeyboardHandler(Browser);
