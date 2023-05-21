@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -22,6 +18,7 @@ namespace DeskBand
             //非UI线程未捕获异常处理事件(例如自己创建的一个子线程)
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
+
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             var ex = e.ExceptionObject as Exception;
@@ -39,7 +36,6 @@ namespace DeskBand
         {
             var ex = e.Exception;
             MessageBox.Show(ex.Message + "\n\r" + ex.StackTrace);
-
         }
     }
 }
