@@ -11,7 +11,7 @@
         "projectName": "Win32",
         "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
         "packagesPath": "C:\\Users\\28045\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\obj\\",
+        "outputPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\28045\\AppData\\Roaming\\NuGet\\NuGet.Config",

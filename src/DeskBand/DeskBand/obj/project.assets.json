@@ -729,9 +729,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
-      "projectName": "DeskBand",
-      "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\DeskBand.csproj",
+      "projectUniqueName": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
+      "projectName": "Dell Thermal Monitor",
+      "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
       "packagesPath": "C:\\Users\\28045\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\obj\\",
       "projectStyle": "PackageReference",
