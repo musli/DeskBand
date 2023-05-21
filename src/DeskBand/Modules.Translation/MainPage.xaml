@@ -8,18 +8,13 @@
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage" UseLayoutRounding="True">
-    <Page.Resources>
-        <ResourceDictionary>
-            <BooleanToVisibilityConverter x:Key="BTVConvert" />
-        </ResourceDictionary>
-    </Page.Resources>
     <Grid>
         <Grid.Resources>
             <Style TargetType="Button">
                 <Setter Property="Padding" Value="0" />
-                <Setter Property="Background" Value="#5000"></Setter>
                 <Setter Property="BorderThickness" Value="0"></Setter>
                 <Setter Property="Margin" Value="0,0,0,0"></Setter>
+                <Setter Property="Background" Value="#5000"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
                 <Setter Property="MinHeight" Value="30"></Setter>
                 <Setter Property="MinWidth" Value="30"></Setter>
@@ -28,6 +23,12 @@
                 <Setter Property="FontFamily" Value="Microsoft YaHei" />
                 <Setter Property="FontWeight" Value="Bold" />
                 <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="#5000"></Setter>
+                        <Setter Property="Foreground" Value="White"></Setter>
+                    </Trigger>
+                </Style.Triggers>
             </Style>
         </Grid.Resources>
         <Grid>

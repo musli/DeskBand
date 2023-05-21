@@ -6,9 +6,7 @@ using System.IO;
 using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
 
 namespace Modules.Translation
 {
@@ -250,45 +248,6 @@ namespace Modules.Translation
             }
             // 释放资源
             bgWorker.Dispose();
-        }
-
-        #region Events
-
-        /// <summary>
-        /// 退出
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MenuItemExit_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        #endregion Events
-
-        private static SolidColorBrush polygonBrush = new SolidColorBrush(System.Windows.Media.Color.FromArgb(128, 255, 255, 255));
-
-        /// <summary>
-        /// 按钮点击开始涟漪动画
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            var grid = sender as Grid;
-
-            var time = 0.5d;
-            var path = grid.Children[0] as System.Windows.Shapes.Path;
-            var ellipse = path.Data as EllipseGeometry;
-
-            //设置圆心位置
-            ellipse.Center = e.GetPosition(grid);
-            //根据勾股定理计算涟漪最大长度
-            var maxLength = Math.Sqrt(Math.Pow(grid.ActualWidth, 2) + Math.Pow(grid.ActualHeight, 2));
-            //开始涟漪放缩动画
-            ellipse.BeginAnimation(EllipseGeometry.RadiusXProperty, new DoubleAnimation(0, maxLength, new Duration(TimeSpan.FromSeconds(time))));
-            //开始透明度消失动画
-            path.BeginAnimation(System.Windows.Shapes.Path.OpacityProperty, new DoubleAnimation(1, 0, new Duration(TimeSpan.FromSeconds(time))));
         }
     }
 }
