@@ -7,9 +7,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="KwtButtonStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>

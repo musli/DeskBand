@@ -16,7 +16,7 @@ namespace DeskBand
         //往左边偏移
         private int toLeftOffset = 0;
 
-        private int custom_width = 150;
+        private int custom_width = 135;
 
         public MainWindow()
         {

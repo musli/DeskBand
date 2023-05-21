@@ -10,35 +10,31 @@
       Title="MainPage" UseLayoutRounding="True">
     <Page.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Modules.Translation;component/KwtButtonStyle.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-            <RoutedCommand x:Key="Translation" />
-            <RoutedCommand x:Key="Format" />
-            <RoutedCommand x:Key="SelectAll" />
-            <RoutedCommand x:Key="Go" />
-            <RoutedCommand x:Key="Browser" />
             <BooleanToVisibilityConverter x:Key="BTVConvert" />
         </ResourceDictionary>
     </Page.Resources>
     <Grid>
         <Grid.Resources>
-            <Style TargetType="Button" BasedOn="{StaticResource KwtButtonRipplesAsyncBaseStyle}">
+            <Style TargetType="Button">
                 <Setter Property="Padding" Value="0" />
                 <Setter Property="Background" Value="#5000"></Setter>
                 <Setter Property="BorderThickness" Value="0"></Setter>
                 <Setter Property="Margin" Value="0,0,0,0"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
-                <Setter Property="Foreground" Value="White"></Setter>
                 <Setter Property="MinHeight" Value="30"></Setter>
                 <Setter Property="MinWidth" Value="30"></Setter>
+
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="FontFamily" Value="Microsoft YaHei" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
             </Style>
         </Grid.Resources>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*" />
-                <ColumnDefinition Width="2*" />
-                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="4*" />
             </Grid.ColumnDefinitions>
             <Button x:Name="CpuUsage" Grid.Column="0" Content="100%">
             </Button>
