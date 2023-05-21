@@ -1,11 +1,6 @@
-﻿using CefSharp;
-using CefSharp.Wpf;
-using System;
-using System.Diagnostics;
-using System.Net;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
@@ -18,19 +13,10 @@ namespace Modules.Translation
     /// </summary>
     public partial class MainPage : Page
     {
-        #region Fields
-
-        private WebClient client = new WebClient();
-
-        #endregion Fields
-
         #region Methods
 
         public MainPage()
         {
-            CefSettings _settings = new CefSettings();
-            _settings.UserAgent = "tv.danmaku.bili/6250300 (Linux; U; Android 11; zh_CN; V1824A; Build/RP1A.200720.012; Cronet/81.0.4044.156)";
-            Cef.Initialize(_settings);
             InitializeComponent();
             //支持中文输入，但是ime不能定位到光标位置，但是可以在popup里面输入中文
             //支持中文输入以及ime定位但是在popup里面失效，推测是popup没有实体句柄之类的
@@ -42,19 +28,6 @@ namespace Modules.Translation
         #region Events
 
         /// <summary>
-        /// 检测ctrl+v自动翻译
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void txtSource_KeyUp(object sender, KeyEventArgs e)
-        {
-            //if (Keyboard.Modifiers == ModifierKeys.Control && e.Key == Key.V)
-            //{
-            //    CommandBindingTranslation_Executed(null, null);
-            //}
-        }
-
-        /// <summary>
         /// 退出
         /// </summary>
         /// <param name="sender"></param>
@@ -62,21 +35,6 @@ namespace Modules.Translation
         private void MenuItemExit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        /// <summary>
-        /// 跳转项目地址
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Hyperlink_Click(object sender, RoutedEventArgs e)
-        {
-            var psi = new ProcessStartInfo
-            {
-                FileName = (sender as Hyperlink).NavigateUri.AbsoluteUri,
-                UseShellExecute = true
-            };
-            Process.Start(psi);
         }
 
         #endregion Events
