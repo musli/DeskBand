@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {}
+    "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
+    "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
+        "projectUniqueName": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
         "projectName": "Modules.Translation",
-        "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
+        "projectPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj",
         "packagesPath": "C:\\Users\\28045\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\obj\\",
+        "outputPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\28045\\AppData\\Roaming\\NuGet\\NuGet.Config",

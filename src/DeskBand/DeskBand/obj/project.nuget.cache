@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2l4FHeUiif2hpHWjYQCZ2h/JaSjfr552He5wP2+BZQoOA+/zfcWMfdLzIMD8Z/HHWedB/RP9g5WLeSxF78A4wA==",
+  "dgSpecHash": "ow0hoJUV2L6L5mXy5j/3r/pGKto9r9dwJfCUrWpJIcaICmGh/BOaAvY6Uzp9KptCeLsjTD5WLvYI1MDvisZNdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
+  "projectFilePath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\28045\\.nuget\\packages\\cef.redist.x64\\79.1.36\\cef.redist.x64.79.1.36.nupkg.sha512",
     "C:\\Users\\28045\\.nuget\\packages\\cef.redist.x86\\79.1.36\\cef.redist.x86.79.1.36.nupkg.sha512",

@@ -729,11 +729,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
+      "projectUniqueName": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
       "projectName": "Dell Thermal Monitor",
-      "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
+      "projectPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\Dell Thermal Monitor.csproj",
       "packagesPath": "C:\\Users\\28045\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\obj\\",
+      "outputPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\DeskBand\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\28045\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -750,11 +750,11 @@
         "net7.0-windows10.0.19041": {
           "targetAlias": "net7.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
-              "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj"
+            "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj": {
+              "projectPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Modules.Translation\\Modules.Translation.csproj"
             },
-            "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj": {
-              "projectPath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj"
+            "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj": {
+              "projectPath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj"
             }
           }
         }
