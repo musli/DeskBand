@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RrQqXlTg2PVWJmFRlu0pa8kgJ38ecDtVd4xMys04eDY3941pNeqsuyXFlken52bXJitPzTgTtxsE+KaB2SNSQA==",
+  "dgSpecHash": "hw7WQOXHlfY6px/eMvi5jFnheRVhZBvTJsphX/NJQkM2F5m9FVmfbAKAlyDfW9TvA8AROr+8QP8Vx21fAhRU1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\28045\\source\\repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
+  "projectFilePath": "C:\\Users\\28045\\Source\\Repos\\zzccchen\\DellThermalMonitor_Base_DeskBand\\src\\DeskBand\\Win32\\Win32.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\28045\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\28045\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

@@ -4,15 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeskBand"
-        mc:Ignorable="d" ShowInTaskbar="False" 
-         WindowStyle="None"  ResizeMode="NoResize"  
+        mc:Ignorable="d" ShowInTaskbar="False"
+         WindowStyle="None"  ResizeMode="NoResize"
         Title="MainWindow" Height="30" Width="90"  Loaded="Window_Loaded" Closed="Window_Closed">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="WindowChrome.WindowChrome">
                 <Setter.Value>
                     <!--使用WindowChrome制作窗体透明效果https://blog.walterlv.com/post/wpf-transparent-window-without-allows-transparency.html-->
-                    <WindowChrome GlassFrameThickness="-1"  CaptionHeight="0"  ResizeBorderThickness="0"/>
+                    <WindowChrome GlassFrameThickness="-1"  CaptionHeight="0"  ResizeBorderThickness="0" />
                 </Setter.Value>
             </Setter>
             <Setter Property="Template">
@@ -27,7 +27,7 @@
         </Style>
     </Window.Style>
     <Grid>
-        <Border BorderThickness="1" BorderBrush="Red" Visibility="Collapsed">
+        <Border BorderThickness="0" BorderBrush="Red" Visibility="Collapsed">
             <Button Click="Button_Click" Content="Click Me"></Button>
         </Border>
         <Frame x:Name="frame"></Frame>

@@ -23,39 +23,27 @@
     </Page.Resources>
     <Grid>
         <Grid.Resources>
-            <Style TargetType="TextBox">
-                <Setter Property="Background" Value="#5000" />
-                <Setter Property="VerticalContentAlignment" Value="Center" />
-                <Setter Property="Foreground" Value="White"></Setter>
-                <Setter Property="BorderThickness" Value="0" />
-            </Style>
             <Style TargetType="Button" BasedOn="{StaticResource KwtButtonRipplesAsyncBaseStyle}">
+                <Setter Property="Padding" Value="0" />
                 <Setter Property="Background" Value="#5000"></Setter>
                 <Setter Property="BorderThickness" Value="0"></Setter>
-                <Setter Property="Margin" Value="2,0,0,0"></Setter>
+                <Setter Property="Margin" Value="0,0,0,0"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
                 <Setter Property="Foreground" Value="White"></Setter>
                 <Setter Property="MinHeight" Value="30"></Setter>
                 <Setter Property="MinWidth" Value="30"></Setter>
             </Style>
-            <Style TargetType="ToggleButton" x:Key="ToggleButton.Task">
-                <Setter Property="Background" Value="#5000"></Setter>
-                <Setter Property="BorderThickness" Value="0"></Setter>
-                <Setter Property="Margin" Value="2,0,0,0"></Setter>
-                <Setter Property="Foreground" Value="White"></Setter>
-                <Setter Property="Foreground" Value="White"></Setter>
-                <Setter Property="MinHeight" Value="30"></Setter>
-            </Style>
         </Grid.Resources>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="4*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-        <UniformGrid Grid.Column="1" Columns="4" x:Name="dcPanel" Visibility="{Binding ElementName=togButton,Path=IsChecked, Converter={StaticResource BTVConvert}}">
-            <Button Content="T" ToolTip="Translation(Ctrl+T)" Command="{StaticResource Translation}"></Button>
-            <Button Content="F" ToolTip="Format(Ctrl+F)" Command="{StaticResource Format}"></Button>
-            <Button x:Name="btnG" Content="G" ToolTip="GoTo(Ctrl+G)" Command="{StaticResource Go}"></Button>
-        </UniformGrid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="100%">
+            </Button>
+            <Button Grid.Column="1"  Content="56c" ></Button>
+            <Button Grid.Column="2"  Content="56c"></Button>
+        </Grid>
     </Grid>
 </Page>
