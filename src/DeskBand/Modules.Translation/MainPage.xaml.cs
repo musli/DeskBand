@@ -112,7 +112,7 @@ namespace Modules.Translation
         {
             timer = new System.Timers.Timer(1000);
             // 设置定时器触发事件的处理方法
-            timer.Elapsed += Timer_Elapsed;
+            timer.Elapsed += background_FetchStates_DoWork;
 
             // 设置定时器为可重复触发
             timer.AutoReset = false;
@@ -124,6 +124,7 @@ namespace Modules.Translation
         private void background_FetchStates_DoWork(object sender, ElapsedEventArgs e)
         {
             BackgroundWorker bgWorker = new BackgroundWorker();
+            bgWorker.WorkerReportsProgress = true;
             string ip = txtIp;
             string user = txtUser;
             string password = txtPassword;
@@ -133,7 +134,8 @@ namespace Modules.Translation
 
             string fullExecuteSensor = ipmitoolPath + " " + parametersSensor;
 
-            bgWorker.WorkerReportsProgress = true;
+            // 创建自定义的 RGB 颜色
+
             while (true)
             {
                 bgWorker.ReportProgress(0, "start");
@@ -155,54 +157,89 @@ namespace Modules.Translation
                         temp[1] = src[1];
                         if (cpu_flag == 1 && temp[0].StartsWith("Temp"))
                         {
-                            CPU1T.Content = src[1].Substring(0, 3);
                             cpu_flag++;
                             int CPU1_int = int.Parse(src[1].Substring(0, 3));
-                            //if (CPU1_int >= 85)
-                            //{
-                            //    this.CPU1.ForeColor = System.Drawing.Color.FromArgb(235, 158, 206);
-                            //}
-                            //else if (CPU1_int >= 60)
-                            //{
-                            //    this.CPU1.ForeColor = System.Drawing.Color.FromArgb(253, 213, 59);
-                            //}
-                            //else
-                            //{
-                            //    this.CPU1.ForeColor = System.Drawing.Color.FromArgb(254, 254, 254);
-                            //}
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                Color customColorLow = Color.FromRgb(254, 254, 254);
+                                Color customColorMid = Color.FromRgb(253, 213, 59);
+                                Color customColorHig = Color.FromRgb(235, 158, 206);
+
+                                // 创建对应的画刷对象
+                                SolidColorBrush customBrushLow = new SolidColorBrush(customColorLow);
+                                SolidColorBrush customBrushMid = new SolidColorBrush(customColorMid);
+                                SolidColorBrush customBrushHig = new SolidColorBrush(customColorHig);
+                                CPU1T.Content = CPU1_int + "c";
+                                if (CPU1_int >= 85)
+                                {
+                                    this.CPU1T.Foreground = customBrushHig;
+                                }
+                                else if (CPU1_int >= 60)
+                                {
+                                    this.CPU1T.Foreground = customBrushMid;
+                                }
+                                else
+                                {
+                                    this.CPU1T.Foreground = customBrushLow;
+                                }
+                            });
                             continue;
                         }
                         if (cpu_flag == 2 && temp[0].StartsWith("Temp"))
                         {
-                            CPU2T.Content = src[1].Substring(0, 3);
                             int CPU2_int = int.Parse(src[1].Substring(0, 3));
-                            //if (CPU2_int >= 85)
-                            //{
-                            //    this.CPU2.ForeColor = System.Drawing.Color.FromArgb(235, 158, 206);
-                            //}
-                            //else if (CPU2_int >= 60)
-                            //{
-                            //    this.CPU2.ForeColor = System.Drawing.Color.FromArgb(253, 213, 59);
-                            //}
-                            //else
-                            //{
-                            //    this.CPU2.ForeColor = System.Drawing.Color.FromArgb(254, 254, 254);
-                            //}
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                Color customColorLow = Color.FromRgb(254, 254, 254);
+                                Color customColorMid = Color.FromRgb(253, 213, 59);
+                                Color customColorHig = Color.FromRgb(235, 158, 206);
+
+                                // 创建对应的画刷对象
+                                SolidColorBrush customBrushLow = new SolidColorBrush(customColorLow);
+                                SolidColorBrush customBrushMid = new SolidColorBrush(customColorMid);
+                                SolidColorBrush customBrushHig = new SolidColorBrush(customColorHig);
+
+                                CPU2T.Content = CPU2_int + "c";
+                                if (CPU2_int >= 85)
+                                {
+                                    this.CPU2T.Foreground = customBrushHig;
+                                }
+                                else if (CPU2_int >= 60)
+                                {
+                                    this.CPU2T.Foreground = customBrushMid;
+                                }
+                                else
+                                {
+                                    this.CPU2T.Foreground = customBrushLow;
+                                }
+                            });
                             continue;
                         }
                         if (temp[0].StartsWith("CPU Usage"))
                         {
                             string[] usage_list = src[1].Split('.');
-                            CpuUsage.Content = usage_list[0];
-                            //int usage_int = int.Parse(usage_list[0]);
-                            //if (usage_int >= 90)
-                            //{
-                            //    this.CpuUsage.ForeColor = System.Drawing.Color.FromArgb(212, 59, 26);
-                            //}
-                            //else
-                            //{
-                            //    this.CpuUsage.ForeColor = System.Drawing.Color.FromArgb(254, 254, 254);
-                            //}
+                            int usage_int = int.Parse(usage_list[0]);
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                Color customColorLow = Color.FromRgb(254, 254, 254);
+                                Color customColorMid = Color.FromRgb(253, 213, 59);
+                                Color customColorHig = Color.FromRgb(235, 158, 206);
+
+                                // 创建对应的画刷对象
+                                SolidColorBrush customBrushLow = new SolidColorBrush(customColorLow);
+                                SolidColorBrush customBrushMid = new SolidColorBrush(customColorMid);
+                                SolidColorBrush customBrushHig = new SolidColorBrush(customColorHig);
+
+                                CpuUsage.Content = usage_int + "%";
+                                if (usage_int >= 90)
+                                {
+                                    this.CpuUsage.Foreground = customBrushHig;
+                                }
+                                else
+                                {
+                                    this.CpuUsage.Foreground = customBrushLow;
+                                }
+                            });
                         }
                         //lstViewSensor.Items.Add(new ListViewItem(temp));
                         bgWorker.ReportProgress(1, temp);
